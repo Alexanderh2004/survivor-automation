@@ -1,0 +1,354 @@
+[
+    {
+        "model": "dao.Team",
+        "pk": "87a680b4-52a0-4128-acc6-e868d193ff2f", 
+        "fields": {
+            "created_at": "2025-08-05T00:00:00Z", 
+            "updated_at": "2025-08-05T00:00:00Z", 
+            "name": "Buffalo Bills", 
+            "short_name": "BUF", 
+            "image_url": "https://static.www.nfl.com/t_headshot_desktop/f_auto/league/api/clubs/logos/BUF"
+        }
+    },
+    {
+        "model": "dao.Team", 
+        "pk": "bcefc64c-5995-48aa-9a6b-a4de696be332", 
+        "fields": {
+            "created_at": "2025-08-05T00:00:00Z", 
+            "updated_at": "2025-08-05T00:00:00Z", 
+            "name": "Miami Dolphins", 
+            "short_name": "MIA", 
+            "image_url": "https://static.www.nfl.com/t_headshot_desktop/f_auto/league/api/clubs/logos/MIA"
+        }
+    },
+    {
+        "model": "dao.Team", 
+        "pk": "b4a8b81f-4969-4cea-88da-d49c1a9cf34d", 
+        "fields": {
+            "created_at": "2025-08-05T00:00:00Z", 
+            "updated_at": "2025-08-05T00:00:00Z", 
+            "name": "New England Patriots", 
+            "short_name": "NE", 
+            "image_url": "https://static.www.nfl.com/t_headshot_desktop/f_auto/league/api/clubs/logos/NE"
+        }
+    },
+    {
+        "model": "dao.Team", 
+        "pk": "ba5e2053-2339-443b-9b85-879cd684d652", 
+        "fields": {
+            "created_at": "2025-08-05T00:00:00Z", 
+            "updated_at": "2025-08-05T00:00:00Z", 
+            "name": "New York Jets", 
+            "short_name": "NYJ", 
+            "image_url": "https://static.www.nfl.com/t_headshot_desktop/f_auto/league/api/clubs/logos/NYJ"
+        }
+    },
+    {
+        "model": "dao.Team", 
+        "pk": "ba3c39c4-b6cd-437f-b101-6e5ed99f051e", 
+        "fields": {
+            "created_at": "2025-08-05T00:00:00Z", 
+            "updated_at": "2025-08-05T00:00:00Z", 
+            "name": "Baltimore Ravens", 
+            "short_name": "BAL", 
+            "image_url": "https://static.www.nfl.com/t_headshot_desktop/f_auto/league/api/clubs/logos/BAL"
+        }
+    },
+    {
+        "model": "dao.Team", 
+        "pk": "739af306-9f33-4a9a-9299-8b8daa104d1e", 
+        "fields": {
+            "created_at": "2025-08-05T00:00:00Z", 
+            "updated_at": "2025-08-05T00:00:00Z", 
+            "name": "Cincinnati Bengals", 
+            "short_name": "CIN", 
+            "image_url": "https://static.www.nfl.com/t_headshot_desktop/f_auto/league/api/clubs/logos/CIN"
+        }
+    },
+    {
+        "model": "dao.Team", 
+        "pk": "0a068342-ca79-4678-a72d-aedfacf173bc", 
+        "fields": {
+            "created_at": "2025-08-05T00:00:00Z", 
+            "updated_at": "2025-08-05T00:00:00Z", 
+            "name": "Cleveland Browns", 
+            "short_name": "CLE", 
+            "image_url": "https://static.www.nfl.com/t_headshot_desktop/f_auto/league/api/clubs/logos/CLE"
+        }
+    },
+    {
+        "model": "dao.Team", 
+        "pk": "84f9328c-371c-4749-b75f-9dc9d7f0128d", 
+        "fields": {
+            "created_at": "2025-08-05T00:00:00Z", 
+            "updated_at": "2025-08-05T00:00:00Z", 
+            "name": "Pittsburgh Steelers", 
+            "short_name": "PIT", 
+            "image_url": "https://static.www.nfl.com/t_headshot_desktop/f_auto/league/api/clubs/logos/PIT"
+        }
+    },
+    {
+        "model": "dao.Team", 
+        "pk": "a5256029-36fa-49bf-a1e7-53ce70834e33", 
+        "fields": {
+            "created_at": "2025-08-05T00:00:00Z", 
+            "updated_at": "2025-08-05T00:00:00Z", 
+            "name": "Houston Texans", 
+            "short_name": "HOU", 
+            "image_url": "https://static.www.nfl.com/t_headshot_desktop/f_auto/league/api/clubs/logos/HOU"
+        }
+    },
+    {
+        "model": "dao.Team", 
+        "pk": "30a55714-786a-4287-bd73-e7ba732c4beb", 
+        "fields": {
+            "created_at": "2025-08-05T00:00:00Z", 
+            "updated_at": "2025-08-05T00:00:00Z", 
+            "name": "Indianapolis Colts", 
+            "short_name": "IND", 
+            "image_url": "https://static.www.nfl.com/t_headshot_desktop/f_auto/league/api/clubs/logos/IND"
+        }
+    },
+    {
+        "model": "dao.Team", 
+        "pk": "5467000d-1235-4e86-a20b-3447176c7e64", 
+        "fields": {
+            "created_at": "2025-08-05T00:00:00Z", 
+            "updated_at": "2025-08-05T00:00:00Z", 
+            "name": "Jacksonville Jaguars", 
+            "short_name": "JAX", 
+            "image_url": "https://static.www.nfl.com/t_headshot_desktop/f_auto/league/api/clubs/logos/JAX"
+        }
+    },
+    {
+        "model": "dao.Team", 
+        "pk": "a675beb2-e1d0-40b4-8661-4223ef825c19", 
+        "fields": {
+            "created_at": "2025-08-05T00:00:00Z", 
+            "updated_at": "2025-08-05T00:00:00Z", 
+            "name": "Tennessee Titans", 
+            "short_name": "TEN", 
+            "image_url": "https://static.www.nfl.com/t_headshot_desktop/f_auto/league/api/clubs/logos/TEN"
+        }
+    },
+    {
+        "model": "dao.Team", 
+        "pk": "8ce670ab-0e3a-4d6e-87f2-3aa167de6d3d", 
+        "fields": {
+            "created_at": "2025-08-05T00:00:00Z", 
+            "updated_at": "2025-08-05T00:00:00Z", 
+            "name": "Denver Broncos", 
+            "short_name": "DEN", 
+            "image_url": "https://static.www.nfl.com/t_headshot_desktop/f_auto/league/api/clubs/logos/DEN"
+        }
+    },
+    {
+        "model": "dao.Team", 
+        "pk": "d298a121-9e5a-478f-953e-002b893861c8", 
+        "fields": {
+            "created_at": "2025-08-05T00:00:00Z", 
+            "updated_at": "2025-08-05T00:00:00Z", 
+            "name": "Kansas City Chiefs", 
+            "short_name": "KC", 
+            "image_url": "https://static.www.nfl.com/t_headshot_desktop/f_auto/league/api/clubs/logos/KC"
+        }
+    },
+    {
+        "model": "dao.Team", 
+        "pk": "5f443959-82b1-4e9b-a684-b0f4b3013937", 
+        "fields": {
+            "created_at": "2025-08-05T00:00:00Z", 
+            "updated_at": "2025-08-05T00:00:00Z", 
+            "name": "Las Vegas Raiders", 
+            "short_name": "LV", 
+            "image_url": "https://static.www.nfl.com/t_headshot_desktop/f_auto/league/api/clubs/logos/LV"
+        }
+    },
+    {
+        "model": "dao.Team", 
+        "pk": "d9f912c9-360d-44ca-86bd-d6b50d71f955", 
+        "fields": {
+            "created_at": "2025-08-05T00:00:00Z", 
+            "updated_at": "2025-08-05T00:00:00Z", 
+            "name": "Los Angeles Chargers", 
+            "short_name": "LAC", 
+            "image_url": "https://static.www.nfl.com/t_headshot_desktop/f_auto/league/api/clubs/logos/LAC"
+        }
+    },
+    {
+        "model": "dao.Team", 
+        "pk": "549f150a-8bba-42b1-8ade-9c63390e003b", 
+        "fields": {
+            "created_at": "2025-08-05T00:00:00Z", 
+            "updated_at": "2025-08-05T00:00:00Z", 
+            "name": "Dallas Cowboys", 
+            "short_name": "DAL", 
+            "image_url": "https://static.www.nfl.com/t_headshot_desktop/f_auto/league/api/clubs/logos/DAL"
+        }
+    },
+    {
+        "model": "dao.Team", 
+        "pk": "42dc43bb-c156-4123-9f35-b23282818a93", 
+        "fields": {
+            "created_at": "2025-08-05T00:00:00Z", 
+            "updated_at": "2025-08-05T00:00:00Z", 
+            "name": "New York Giants", 
+            "short_name": "NYG", 
+            "image_url": "https://static.www.nfl.com/t_headshot_desktop/f_auto/league/api/clubs/logos/NYG"
+        }
+    },
+    {
+        "model": "dao.Team", 
+        "pk": "4db6b5ae-fb25-4340-beb8-ae1b01f1e03e", 
+        "fields": {
+            "created_at": "2025-08-05T00:00:00Z", 
+            "updated_at": "2025-08-05T00:00:00Z", 
+            "name": "Philadelphia Eagles", 
+            "short_name": "PHI", 
+            "image_url": "https://static.www.nfl.com/t_headshot_desktop/f_auto/league/api/clubs/logos/PHI"
+        }
+    },
+    {
+        "model": "dao.Team", 
+        "pk": "94e73f4f-5a66-400e-96f8-6e9445ae6d19", 
+        "fields": {
+            "created_at": "2025-08-05T00:00:00Z", 
+            "updated_at": "2025-08-05T00:00:00Z", 
+            "name": "Washington Commanders", 
+            "short_name": "WAS", 
+            "image_url": "https://static.www.nfl.com/t_headshot_desktop/f_auto/league/api/clubs/logos/WAS"
+        }
+    },
+    {
+        "model": "dao.Team", 
+        "pk": "47eb7aae-0c51-4094-b09e-7e034f72f6ed", 
+        "fields": {
+            "created_at": "2025-08-05T00:00:00Z", 
+            "updated_at": "2025-08-05T00:00:00Z", 
+            "name": "Chicago Bears", 
+            "short_name": "CHI", 
+            "image_url": "https://static.www.nfl.com/t_headshot_desktop/f_auto/league/api/clubs/logos/CHI"
+        }
+    },
+    {
+        "model": "dao.Team", 
+        "pk": "8b7bb324-856c-4f8d-8697-2d7e5f86d043", 
+        "fields": {
+            "created_at": "2025-08-05T00:00:00Z", 
+            "updated_at": "2025-08-05T00:00:00Z", 
+            "name": "Detroit Lions", 
+            "short_name": "DET", 
+            "image_url": "https://static.www.nfl.com/t_headshot_desktop/f_auto/league/api/clubs/logos/DET"
+        }
+    },
+    {
+        "model": "dao.Team", 
+        "pk": "25cdd3dc-c230-450f-9348-aa3ee7982e72", 
+        "fields": {
+            "created_at": "2025-08-05T00:00:00Z", 
+            "updated_at": "2025-08-05T00:00:00Z", 
+            "name": "Green Bay Packers", 
+            "short_name": "GB", 
+            "image_url": "https://static.www.nfl.com/t_headshot_desktop/f_auto/league/api/clubs/logos/GB"
+        }
+    },
+    {
+        "model": "dao.Team", 
+        "pk": "6eee4c09-2059-471b-bc31-45cd1f7e52fe", 
+        "fields": {
+            "created_at": "2025-08-05T00:00:00Z", 
+            "updated_at": "2025-08-05T00:00:00Z", 
+            "name": "Minnesota Vikings", 
+            "short_name": "MIN", 
+            "image_url": "https://static.www.nfl.com/t_headshot_desktop/f_auto/league/api/clubs/logos/MIN"
+        }
+    },
+    {
+        "model": "dao.Team", 
+        "pk": "f9241245-58de-4ac7-9c59-771640cd6c9a", 
+        "fields": {
+            "created_at": "2025-08-05T00:00:00Z", 
+            "updated_at": "2025-08-05T00:00:00Z", 
+            "name": "Atlanta Falcons", 
+            "short_name": "ATL", 
+            "image_url": "https://static.www.nfl.com/t_headshot_desktop/f_auto/league/api/clubs/logos/ATL"
+        }
+    },
+    {
+        "model": "dao.Team", 
+        "pk": "0bb0e1be-2b44-40d4-96cf-6160fbec197a", 
+        "fields": {
+            "created_at": "2025-08-05T00:00:00Z", 
+            "updated_at": "2025-08-05T00:00:00Z", 
+            "name": "Carolina Panthers", 
+            "short_name": "CAR", 
+            "image_url": "https://static.www.nfl.com/t_headshot_desktop/f_auto/league/api/clubs/logos/CAR"
+        }
+    },
+    {
+        "model": "dao.Team", 
+        "pk": "d9f26455-93f9-41cf-bc29-ba87ca37b5ed", 
+        "fields": {
+            "created_at": "2025-08-05T00:00:00Z", 
+            "updated_at": "2025-08-05T00:00:00Z", 
+            "name": "New Orleans Saints", 
+            "short_name": "NO", 
+            "image_url": "https://static.www.nfl.com/t_headshot_desktop/f_auto/league/api/clubs/logos/NO"
+        }
+    },
+    {
+        "model": "dao.Team", 
+        "pk": "ac148d79-9096-43c7-9e9a-7109dedfaac4", 
+        "fields": {
+            "created_at": "2025-08-05T00:00:00Z", 
+            "updated_at": "2025-08-05T00:00:00Z", 
+            "name": "Tampa Bay Buccaneers", 
+            "short_name": "TB", 
+            "image_url": "https://static.www.nfl.com/t_headshot_desktop/f_auto/league/api/clubs/logos/TB"
+        }
+    },
+    {
+        "model": "dao.Team", 
+        "pk": "c1b02c91-5f9d-4eb7-8289-6b68a1471af4", 
+        "fields": {
+            "created_at": "2025-08-05T00:00:00Z", 
+            "updated_at": "2025-08-05T00:00:00Z", 
+            "name": "Arizona Cardinals", 
+            "short_name": "ARI", 
+            "image_url": "https://static.www.nfl.com/t_headshot_desktop/f_auto/league/api/clubs/logos/ARI"
+        }
+    },
+    {
+        "model": "dao.Team", 
+        "pk": "c78eea5d-b783-492e-8c81-99a3c6c0b040", 
+        "fields": {
+            "created_at": "2025-08-05T00:00:00Z", 
+            "updated_at": "2025-08-05T00:00:00Z", 
+            "name": "Los Angeles Rams", 
+            "short_name": "LAR", 
+            "image_url": "https://static.www.nfl.com/t_headshot_desktop/f_auto/league/api/clubs/logos/LAR"
+        }
+    },
+    {
+        "model": "dao.Team", 
+        "pk": "fc4a8f48-f424-48e2-bcb6-ba4f0c3fa331", 
+        "fields": {
+            "created_at": "2025-08-05T00:00:00Z", 
+            "updated_at": "2025-08-05T00:00:00Z", 
+            "name": "San Francisco 49ers", 
+            "short_name": "SF", 
+            "image_url": "https://static.www.nfl.com/t_headshot_desktop/f_auto/league/api/clubs/logos/SF"
+        }
+    },
+    {
+        "model": "dao.Team", 
+        "pk": "665caa2d-ccd4-44d7-ad9a-d3c0c65480fd", 
+        "fields": {
+            "created_at": "2025-08-05T00:00:00Z", 
+            "updated_at": "2025-08-05T00:00:00Z", 
+            "name": "Seattle Seahawks", 
+            "short_name": "SEA", 
+            "image_url": "https://static.www.nfl.com/t_headshot_desktop/f_auto/league/api/clubs/logos/SEA"
+        }
+    }
+]
