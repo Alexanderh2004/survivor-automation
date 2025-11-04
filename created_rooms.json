@@ -1,0 +1,772 @@
+{
+  "3c069b59-f051-457a-b379-edfd82c3134e": {
+    "id": "3c069b59-f051-457a-b379-edfd82c3134e",
+    "league_id": "9e65c553-19ae-4f58-8622-9e1eba7d21d6",
+    "start_time_epoch": 1762316635,
+    "weeks": [
+      [
+        "5fc54b27-ed20-44f7-a925-1bb44aac168c",
+        "e83e3ed4-0ada-40b1-88ee-a3b803b3f93c",
+        "26339d0e-0d77-4481-9314-04b571e5c9df"
+      ],
+      [
+        "707f5136-b3b1-4886-92f1-29450e001eee",
+        "533c8cd7-15ac-4f37-a343-4531a679161f",
+        "c6d162e8-5784-493a-8fb9-c665b4924573"
+      ],
+      [
+        "f0d05d2d-4121-416d-aaa9-bdcae0d9393a",
+        "554997d4-1184-418b-a478-6811c5d355c7",
+        "67297694-ffef-4dab-8c0e-fc000481a6e7"
+      ]
+    ]
+  },
+  "b445378c-ee22-4b2c-a541-31d424ca13db": {
+    "id": "b445378c-ee22-4b2c-a541-31d424ca13db",
+    "league_id": "784de5de-168b-4dc3-b012-ae313aaad9dc",
+    "start_time_epoch": 1762319343,
+    "weeks": [
+      [
+        "77f8f222-824e-4bd1-90dd-a505f65c7936",
+        "a0bb30ff-a956-40f2-bf09-b24128c30613",
+        "be6ef86b-2a2f-457e-a377-2bd5714c2dde"
+      ],
+      [
+        "dd78b0bc-6016-4182-8a7f-745c0b7a7539",
+        "825d59ed-e63c-4089-a86f-07a1315d6e23",
+        "56ecbada-63a8-422f-9c19-c7916d767241"
+      ],
+      [
+        "fa64ed86-2242-455c-bc78-b94878163134",
+        "d3210f10-a0a8-46e5-bb3a-824bf750580f",
+        "6035e934-cac0-45ec-b383-1c92bebb318d"
+      ]
+    ]
+  },
+  "3c6b64ff-c11b-4d89-9646-a454887142c8": {
+    "id": "3c6b64ff-c11b-4d89-9646-a454887142c8",
+    "league_id": "13a166dc-acb4-4b4e-8887-58daba854e60",
+    "start_time_epoch": 1762333750,
+    "weeks": [
+      [
+        "912b3015-22a0-4e27-863d-c1e399401453",
+        "958a70f4-af71-4dc7-954c-8111e925e2bd",
+        "3a538bd4-954e-4cf1-a82c-ade0c909e98c"
+      ],
+      [
+        "38670c50-406f-4cae-abaf-9e65397e32f0",
+        "fab3ec33-a1d4-4f3e-a657-dfa0e52eea91",
+        "4b205edb-abf3-499f-b8dd-73e907dba512"
+      ],
+      [
+        "10748e0f-e473-4993-9fa2-5e7b1fa40ef0",
+        "b870c1a5-c5ab-489c-beb9-9f1626afe11d",
+        "a805e44f-049a-44eb-b56c-73ff8584f348"
+      ]
+    ]
+  },
+  "0659e936-81c6-48bd-b275-21670eab6462": {
+    "id": "0659e936-81c6-48bd-b275-21670eab6462",
+    "league_id": "3ac7a325-6572-48e1-a0d3-ac13e490ca04",
+    "start_time_epoch": 1762402157,
+    "weeks": [
+      [
+        "ac3191f1-2764-46fe-91be-bdb8bec0efd7",
+        "35502d64-0679-44f0-b2e2-bacefbb64d6c",
+        "15768578-1e7a-45ba-a7fe-47c25376ff4c"
+      ],
+      [
+        "6f21f059-4049-4601-b0e1-306f5cf80868",
+        "cc30f241-5475-4c63-b8f3-f5dadf9f9025",
+        "da7bf948-bd79-4073-bdc6-b45f37838734"
+      ],
+      [
+        "00edfe5e-b2b3-449f-9530-3f952e9be131",
+        "049c1179-15b0-43f3-add8-d45c77cee640",
+        "3355d437-34a1-4dce-a05d-43bc2f64e0a6"
+      ]
+    ]
+  },
+  "ee186c5b-1ef6-47dd-aad6-b3c329df62e2": {
+    "id": "ee186c5b-1ef6-47dd-aad6-b3c329df62e2",
+    "league_id": "124c490d-80fa-45fb-9440-75cb75e748ad",
+    "start_time_epoch": 1762574963,
+    "weeks": [
+      [
+        "8116ca8d-34b5-497e-a977-a48afa035838",
+        "39b8b714-2c81-42a5-b990-e32eeb4755c3",
+        "cee3aa57-3937-46ac-9134-6ef6225df9ce"
+      ],
+      [
+        "c5cadd95-e172-4764-909f-b3ab11ed9167",
+        "b587a819-5d34-41a1-aaa6-4b7d25883939",
+        "27a44c52-7d6a-41fc-8999-cad92bec47e3"
+      ],
+      [
+        "874f94c6-0679-4e37-ac68-0453676be40c",
+        "e129b823-5200-4588-b252-1251a9f9b60f",
+        "e8853b3a-a762-4fe6-ae8a-e4478a0e83cc"
+      ]
+    ]
+  },
+  "5bb1e163-fd5b-4335-8e15-99c78a983f4d": {
+    "id": "5bb1e163-fd5b-4335-8e15-99c78a983f4d",
+    "league_id": "027776d7-9bf8-48b4-8a2d-1ee7dcff2523",
+    "start_time_epoch": 1762403070,
+    "weeks": [
+      [
+        "b0271222-be06-48b6-8d52-b94a3940a93c",
+        "6172f49c-cf70-44ec-9554-8246f2ecf95b",
+        "6fb72a3b-faa8-49cd-9bb5-d52269990886"
+      ],
+      [
+        "ef342069-3dd1-4623-8f9d-402d5a3cff1a",
+        "5528cfc2-b5ca-4e83-be5a-297c2f72732a",
+        "96adc687-967d-48bc-b72e-603eaeae523c"
+      ],
+      [
+        "cf30a9ba-1a2f-41bc-927b-b7f124669d63",
+        "116dbd61-add4-45b2-b35e-5c5ce899ca18",
+        "f27748a9-407b-4069-a78a-78ee3bc723b5"
+      ]
+    ]
+  },
+  "132dce4e-62ba-4789-835c-7ec9411ea9ca": {
+    "id": "132dce4e-62ba-4789-835c-7ec9411ea9ca",
+    "league_id": "f31cfa20-b41f-4799-80a2-d855ab75e9eb",
+    "start_time_epoch": 1762405777,
+    "weeks": [
+      [
+        "47f9e530-99f3-419f-a8c7-10727845dd82",
+        "3b6ccab3-d100-4157-8e5e-e9fe809a8c57",
+        "a5a55f3d-0346-40f6-b3f6-c42d270a85fd"
+      ],
+      [
+        "1218876b-6b9b-423e-927a-c6e0e10e1237",
+        "134c5845-9fd8-43e3-9224-a0a78cf34d4c",
+        "61131f7d-3b2d-498a-a841-27dffec53b4e"
+      ],
+      [
+        "9b1360bb-79f2-438c-b009-784e35dd9de8",
+        "c780c55b-e1d1-4201-a5e5-d04dad574203",
+        "7ab662b3-99cd-4d14-b564-5445a1727bb9"
+      ]
+    ]
+  },
+  "9ed78197-e18e-42f3-a89c-5239960da31a": {
+    "id": "9ed78197-e18e-42f3-a89c-5239960da31a",
+    "league_id": "80c6c69d-0ee1-42db-99a5-16cbd972aca5",
+    "start_time_epoch": 1762420184,
+    "weeks": [
+      [
+        "6deb625b-7ad0-4fed-a1ce-ae2359a1afae",
+        "b13acdb1-5965-47a1-9a27-d25806a7baea",
+        "18a2f4e0-0fc0-4907-8bfe-5b8d26c5f767"
+      ],
+      [
+        "7d12e97f-6f51-4c51-9bdd-773f77e0ea5c",
+        "e9234e0d-8fff-460f-b263-a7ed238f0964",
+        "ecf38ece-cbef-461e-a330-ca1e650d46fb"
+      ],
+      [
+        "c7ffb598-3d77-4eb2-a534-7f566abc5dff",
+        "f7c5d229-b283-46f2-80f6-58e77e5286d9",
+        "63f5806b-97a7-4163-a0e7-64de185fd042"
+      ]
+    ]
+  },
+  "02439ad4-cad1-42a1-804e-fbf39248c2ee": {
+    "id": "02439ad4-cad1-42a1-804e-fbf39248c2ee",
+    "league_id": "c03e8cdd-3078-4382-82e5-533d068773ac",
+    "start_time_epoch": 1762488591,
+    "weeks": [
+      [
+        "e895c81a-7bca-4acc-854a-fbd750e22414",
+        "99124e3a-bf9b-4f89-9ec4-c76682a798b2",
+        "8c3c27a9-75da-4948-b67e-08d9be2f1c96"
+      ],
+      [
+        "61e339b6-8587-4bd9-8b62-98b995c68efa",
+        "a3faa62f-bf65-43bc-ba99-6c1f51f471e7",
+        "b6263b50-1581-4c46-931e-bab65305a069"
+      ],
+      [
+        "3e23d22a-e263-4e2b-942c-19e8360e2511",
+        "66274e95-b267-4437-931b-6522f0877482",
+        "dce891b7-8e87-4cbe-86ac-081df790c71c"
+      ]
+    ]
+  },
+  "77b109ce-ecdc-4eaf-827f-35b3934679ff": {
+    "id": "77b109ce-ecdc-4eaf-827f-35b3934679ff",
+    "league_id": "e23a75d3-7dbd-48fb-b561-c92444143325",
+    "start_time_epoch": 1762661397,
+    "weeks": [
+      [
+        "7086fdd7-6cad-4426-83c5-f6266038fae3",
+        "1cbdb05c-1d54-4b5e-ad41-575cd00476f1",
+        "ae61c4d9-6a0a-4d48-96a6-7dc2d19a0ace"
+      ],
+      [
+        "1b875fff-239a-42fe-ad7e-e005d8cfdb80",
+        "cac2d7af-87c5-4e2a-a302-0487a5a6c981",
+        "6e57a239-1483-48f8-b4da-7c504b42bea8"
+      ],
+      [
+        "266d042d-ae30-4a4c-84b8-1d13d967ee4c",
+        "e019ad44-f52f-4c38-bc2e-35e95140ab36",
+        "ef39702e-638c-4f48-916b-34ea35f2c826"
+      ]
+    ]
+  },
+  "65660950-d775-401f-abd4-d28f2e240a28": {
+    "id": "65660950-d775-401f-abd4-d28f2e240a28",
+    "league_id": "c794a538-20ef-4181-8e32-e02492be1dde",
+    "start_time_epoch": 1762489506,
+    "weeks": [
+      [
+        "552c792a-4a99-4e6a-b6ff-a8bc0c0bdf84",
+        "a2180951-ab5a-422d-a299-fc95c1437e22",
+        "3d293786-ea2e-49a2-b55e-b57c8d2d0884"
+      ],
+      [
+        "819691c8-ca4b-40fa-b557-4f933da5ca09",
+        "63464b18-c2fa-4d53-90ca-074b34e91ba5",
+        "3ca5e1e9-3c95-45c4-ad58-8b36299f9c72"
+      ],
+      [
+        "4fcdea59-b6b3-4a9d-b2b8-f79468e6927c",
+        "01691dc4-d405-4f0f-ab27-31621a31f42d",
+        "a7fefd82-4ce8-4d23-aac9-c2cdb6fe8357"
+      ]
+    ]
+  },
+  "289d4628-af8a-4584-befc-542198cf55b3": {
+    "id": "289d4628-af8a-4584-befc-542198cf55b3",
+    "league_id": "ed664f8b-0f25-4d58-8a65-bf3f4e3acbef",
+    "start_time_epoch": 1762492213,
+    "weeks": [
+      [
+        "8dc73bce-5040-4048-a663-b5870efcf2d5",
+        "190559d9-a2c6-4648-b024-b1dbc4d4bd65",
+        "6ecf5c11-b6f0-423f-9c2d-e4030e3c7e05"
+      ],
+      [
+        "b92ee745-7fff-4bb7-bc70-7e0558cae617",
+        "894a0ddf-82e3-4577-90d1-2296659efe0f",
+        "78ce751e-0704-47c8-8593-5777925ef365"
+      ],
+      [
+        "a987e16d-f3e1-4417-b92e-66b1bc1e510f",
+        "99699aa6-c766-44a9-9308-fdad23931eba",
+        "84a89b1a-d70f-4691-82a9-0846a78d191c"
+      ]
+    ]
+  },
+  "51f8a90b-1470-4d6a-8d5e-28acdd2c006a": {
+    "id": "51f8a90b-1470-4d6a-8d5e-28acdd2c006a",
+    "league_id": "3763cb51-8ab4-41fd-9478-d3f69d571a51",
+    "start_time_epoch": 1762506620,
+    "weeks": [
+      [
+        "f12643d3-c3b3-4d35-a1f9-0d55e8553a1b",
+        "c9bd193f-3257-401f-b8da-1f3dd9a4e9cd",
+        "a6722179-4a46-4f91-a392-6d0f547ce3df"
+      ],
+      [
+        "ab02b540-920b-4538-b7eb-534097363748",
+        "db9092c8-bfad-4a2a-9bce-3fdb0e32c8b4",
+        "b2347f3d-2243-4547-99bd-2e204710e4bc"
+      ],
+      [
+        "3675db6a-0030-4ca9-9c33-4f8f0113c556",
+        "2c0a384f-d782-43ab-9633-e6c91fdf4777",
+        "ffbfc2c4-1652-4eab-aec7-0368ea325dd0"
+      ]
+    ]
+  },
+  "374637c9-9a47-489c-ae56-d996c34653e8": {
+    "id": "374637c9-9a47-489c-ae56-d996c34653e8",
+    "league_id": "d9df324e-a85e-4de0-abdc-9546fd6859aa",
+    "start_time_epoch": 1762575026,
+    "weeks": [
+      [
+        "000f4a36-c242-474c-9abf-eb334e10bdd4",
+        "0a017015-a42e-4a06-b439-1a07de5aaaf4",
+        "91d99115-a8bb-4620-aad5-0b52c602ca9f"
+      ],
+      [
+        "13717122-8906-4eeb-a9b3-bbd25b549787",
+        "ab6c558f-f9b8-4377-a916-21877728a909",
+        "baf27cc7-0148-4bff-881d-54e822868c41"
+      ],
+      [
+        "f6ab18c2-d4cb-4ddd-abfb-c7b87e5b4199",
+        "b44a2465-d142-42d8-9c5a-d660754e7961",
+        "1844edb8-3f13-4953-8000-629af2ed6db0"
+      ]
+    ]
+  },
+  "7a2b1f6e-d507-4c65-b318-6f4a550592e0": {
+    "id": "7a2b1f6e-d507-4c65-b318-6f4a550592e0",
+    "league_id": "181700c8-1bb6-4b2f-9581-1d825bd26081",
+    "start_time_epoch": 1762747833,
+    "weeks": [
+      [
+        "ed9c0431-a9b7-4b60-82df-a53e4e00f7c2",
+        "3e43f601-cb1a-474f-8891-49fc844a0a68",
+        "0f67740b-0fff-4cf4-9179-457b1fa42b64"
+      ],
+      [
+        "7c441bbb-2fd2-44d1-b49b-fe1386f74e94",
+        "dc0592c9-53f9-4e49-9347-3e3bfc7e363f",
+        "ffc8681c-fe36-44fb-b044-d9abb766b700"
+      ],
+      [
+        "c23bc48a-c884-4100-9dd8-2f9014b64e15",
+        "bb1eafae-8466-452c-a25c-593819bec5f6",
+        "bea6100c-06d1-4f86-9612-19bb68c4e5be"
+      ]
+    ]
+  },
+  "ea4f0022-9529-4a3e-9a45-138de94e2995": {
+    "id": "ea4f0022-9529-4a3e-9a45-138de94e2995",
+    "league_id": "cbbc7630-826c-44ad-b2ce-237060e0097a",
+    "start_time_epoch": 1762575940,
+    "weeks": [
+      [
+        "45afc7ae-8471-40ed-8726-f4c033bf990f",
+        "b1d25731-d599-4f72-b64a-57f3ba8a4299",
+        "d5aaa695-0a5a-490b-bf6f-b19262e42b1a"
+      ],
+      [
+        "552b708b-0e19-4190-bfc4-23c6eb65e1a6",
+        "eada2808-9519-4af0-957c-b4f7017928c3",
+        "c1162b16-6d89-429b-837a-ad6ed89926ae"
+      ],
+      [
+        "21e0e618-0596-4ee8-93b3-717516ab79b5",
+        "0dd7fb07-5460-4208-8a45-ff7dc83a00d1",
+        "677350a0-68e8-48eb-a176-259eac1545e0"
+      ]
+    ]
+  },
+  "195e50dc-b93e-4c22-8ee3-f9fb5ad628a7": {
+    "id": "195e50dc-b93e-4c22-8ee3-f9fb5ad628a7",
+    "league_id": "b2bd8845-fb25-43ee-954b-0660911d9c50",
+    "start_time_epoch": 1762578647,
+    "weeks": [
+      [
+        "4f79261f-6bc2-4247-9c61-bd38d36eb183",
+        "8bba35f4-7fec-457f-a9e4-5f1b6838b60e",
+        "e8c50ad3-f986-4d0e-ae21-d00bdf3758d6"
+      ],
+      [
+        "73d2d243-4a6b-47a9-9008-42348d4e85e0",
+        "73bc6df8-4625-401b-9e03-c606a8425202",
+        "08542885-71be-4b26-82e7-6127028c87bc"
+      ],
+      [
+        "773fdc08-535f-4a24-a023-cb370a98a618",
+        "c76f1592-53a9-4f5c-abe7-8d5a0ae08735",
+        "a4ac4c28-50d8-471a-96e9-331b18b6d05b"
+      ]
+    ]
+  },
+  "271414fc-8699-4784-91b9-6a7dc3f24550": {
+    "id": "271414fc-8699-4784-91b9-6a7dc3f24550",
+    "league_id": "d9c0aa51-02f8-4c0b-baf5-02cffa5f2d03",
+    "start_time_epoch": 1762593054,
+    "weeks": [
+      [
+        "b2701ad1-29b7-423a-97f9-755b3cde09cd",
+        "e7ad80f5-7718-43ec-967e-8ebe07bc55ba",
+        "5480bcca-c5e6-4d8c-b3cf-f980b9005571"
+      ],
+      [
+        "41acb5a0-1cfc-42a6-bab1-fd1b6f73c605",
+        "6ccb12f0-0ea8-4187-9bf8-e30dea974b08",
+        "ab836a7e-ff54-4940-9bf2-20b2fdc50978"
+      ],
+      [
+        "69d65771-0c35-4b32-8482-cbe0d09e00ae",
+        "4dd5cd81-98f7-424d-a41b-9bd176837829",
+        "c0632cb0-2755-4e25-ae2b-4c9c42892ac9"
+      ]
+    ]
+  },
+  "43b0e400-6219-4c9d-8f8a-ca3c4d482cba": {
+    "id": "43b0e400-6219-4c9d-8f8a-ca3c4d482cba",
+    "league_id": "f55a90aa-c38a-4fa8-be62-86a927018888",
+    "start_time_epoch": 1762661462,
+    "weeks": [
+      [
+        "c24add3d-97f6-41bf-8b64-0d5fb33631e6",
+        "ee0b8776-2bae-4cf2-9baa-d7eec3c451e4",
+        "a418f544-bce5-4be4-8faa-6978f0583793"
+      ],
+      [
+        "9de6a9d8-d0d6-4d22-bde6-838603e89eee",
+        "120f357d-933b-4030-803c-9bcd4278e61a",
+        "bab880ad-1880-418a-a25d-31e0fa97ac0d"
+      ],
+      [
+        "985c152b-e2bc-40e6-a89a-1bf23fa8e86c",
+        "aa90593b-7fa5-4bf8-ad31-d19447894702",
+        "0df73f1c-9c46-4c31-892a-9b0950b0067a"
+      ]
+    ]
+  },
+  "01745d46-b765-4df4-be80-fd5bcfbb9022": {
+    "id": "01745d46-b765-4df4-be80-fd5bcfbb9022",
+    "league_id": "ce375c92-21fe-46ec-9138-fae09360a568",
+    "start_time_epoch": 1762834269,
+    "weeks": [
+      [
+        "3999ab19-3663-4d4a-943c-d9ad997e2e45",
+        "1a655238-ead7-4f6b-aebe-676ab2c2b1e3",
+        "a639abe5-8711-4367-b8ef-675ea2c7fc97"
+      ],
+      [
+        "beee682e-0cf7-4ffe-814b-9587f99b61a2",
+        "3386d753-8f8d-4aa6-a40b-59f4f0a823f1",
+        "47d2e2ef-694e-44e5-a419-8b8e58b307cd"
+      ],
+      [
+        "cd17d752-1a60-4cfd-b3cc-cb0b7fe8c643",
+        "7a276f7a-56d7-4995-ab08-c306ea73942f",
+        "b919eb40-6efd-4788-b761-ab55a639d72c"
+      ]
+    ]
+  },
+  "d719ac6f-a2e8-4075-b7c9-41e07dcdccf7": {
+    "id": "d719ac6f-a2e8-4075-b7c9-41e07dcdccf7",
+    "league_id": "ea445f9b-cd8e-4f1a-b156-f79919fecc3d",
+    "start_time_epoch": 1762662377,
+    "weeks": [
+      [
+        "0eac9020-9c6a-4b66-b756-918f9beaabdf",
+        "351b972b-b7fc-4c5e-b23a-b2fcbb2b3bef",
+        "32eeda36-44c3-4624-977a-7421790b9d6c"
+      ],
+      [
+        "88e3830e-9016-41b2-b589-b6f80e577038",
+        "c931273a-7b95-4929-a604-ca4da235ba6e",
+        "e782faef-7963-462e-88f4-8fd61fab64f1"
+      ],
+      [
+        "1ac6095c-e4b8-4295-a5be-59dd174609b2",
+        "b3d46bfb-b8c7-46ca-b9df-2f41f2c7df56",
+        "19c74f4e-c222-485c-89c1-d6e9c717ad9a"
+      ]
+    ]
+  },
+  "b73af5d9-dd55-4a30-96f2-d8692b174fc0": {
+    "id": "b73af5d9-dd55-4a30-96f2-d8692b174fc0",
+    "league_id": "09f0c99d-8745-426e-9077-0bd3e9c4d091",
+    "start_time_epoch": 1762665084,
+    "weeks": [
+      [
+        "96b51470-7fbf-4b31-b3d8-f1f23f470443",
+        "20df7e1a-bd8c-4a86-9aad-3b2fc33e61da",
+        "fe5051ff-3829-4c1b-b273-d5334e6b646a"
+      ],
+      [
+        "3601b5fe-0a0b-4d87-a996-3327e8117bcf",
+        "4b3fac8f-06dd-49d3-992a-fbd88bd5ddd5",
+        "3e41836b-5d2a-4b43-aece-0711dff150df"
+      ],
+      [
+        "29909141-cb78-4f04-a009-8178a6f353a5",
+        "e2ff6df7-6c6a-49e5-9ecb-38e4a81e292a",
+        "811af0c2-ed37-4a64-8ccd-008238291bed"
+      ]
+    ]
+  },
+  "2d33a554-54d9-48bf-89d3-442e04208b30": {
+    "id": "2d33a554-54d9-48bf-89d3-442e04208b30",
+    "league_id": "6717d56a-f2d8-47e8-b189-03430f3f0807",
+    "start_time_epoch": 1762679491,
+    "weeks": [
+      [
+        "bc7a9925-0dd4-4df1-ad61-e971122c8195",
+        "2dcf62b5-b25d-4c5b-93e5-d3259d9ee34f",
+        "d246d717-4b16-4351-a4a3-c5c41b2d7aa8"
+      ],
+      [
+        "a1a08436-74f4-418e-8c28-62282c3bb0b6",
+        "57f926be-bfb8-4a1c-b2ac-72b57ee491ea",
+        "8f166482-d6ca-49fe-869d-f32d7bf1601c"
+      ],
+      [
+        "dea84cf1-cbb3-4618-90f4-99e4915d5179",
+        "71de9b42-e3f5-48e4-90dd-bc119fa51d05",
+        "b811a71c-c616-4259-9454-817327bab00e"
+      ]
+    ]
+  },
+  "bec36efe-0ac8-422c-8775-dfa319cc11e0": {
+    "id": "bec36efe-0ac8-422c-8775-dfa319cc11e0",
+    "league_id": "35349e70-45c2-4477-8013-f4bd5b1b26b6",
+    "start_time_epoch": 1762747897,
+    "weeks": [
+      [
+        "ff6a52db-06ea-4b34-84b5-41f42a5c3139",
+        "4c5a3e78-7cdf-4f29-bd16-d0c867c3afc5",
+        "d8e8b811-c40c-44d0-a609-239789c00967"
+      ],
+      [
+        "be860175-2a1a-42c4-bcd6-71f6c6e6517c",
+        "487982f9-b61d-4c3f-9c61-cf8ad422f822",
+        "510ef421-5aaf-4712-9c3a-5a9ac361d864"
+      ],
+      [
+        "b7cba256-fdde-408c-ba98-d3f5d09bc8f0",
+        "832f6dbc-0bf1-475b-bb3a-79e6104a023a",
+        "9b286edb-4a5c-4dfb-9ff8-f4113d017cbe"
+      ]
+    ]
+  },
+  "4ab539ae-8c5b-4867-875d-9d25a4e6b2c7": {
+    "id": "4ab539ae-8c5b-4867-875d-9d25a4e6b2c7",
+    "league_id": "a38b49ba-e377-4f23-8b6e-fb13987fbe76",
+    "start_time_epoch": 1762920704,
+    "weeks": [
+      [
+        "c75d28ce-133b-48f0-85cc-f61e57027650",
+        "b8b644e8-3d25-4907-82b4-1862062211f1",
+        "d7e86ef1-50e7-4079-9161-690c3566c4db"
+      ],
+      [
+        "b8d4194b-515e-4119-a29d-226992773929",
+        "36d35ad7-4236-4d70-b258-01c8b2d3d879",
+        "2b7ea865-9ec4-4e08-b62d-bcfe84d4436c"
+      ],
+      [
+        "8bd31f0c-f15e-48d3-bd00-3f4a1c670cd9",
+        "b230c5a9-fdf6-4943-bc86-5f99f2db2a02",
+        "335ebb75-2dda-459a-82ee-2c7b520855cb"
+      ]
+    ]
+  },
+  "09ff7972-a269-498a-b38a-f5eea1124e07": {
+    "id": "09ff7972-a269-498a-b38a-f5eea1124e07",
+    "league_id": "e9fd8f2c-669b-425c-85a8-5ed3208c5145",
+    "start_time_epoch": 1762748811,
+    "weeks": [
+      [
+        "6a1bb70a-1df8-4ae9-8aa5-33eb60ad3259",
+        "ac9192b9-838e-49a8-9475-f93f5a1b3209",
+        "4d8933fe-6bce-4417-90cb-9060dc10aef9"
+      ],
+      [
+        "a63db3db-da65-4c76-a69a-b37b87e95651",
+        "13bb091d-6e25-4170-8844-8279355de412",
+        "e4ee10f0-47d9-4d43-8b93-d7eec3020d5a"
+      ],
+      [
+        "99b64c33-2cfb-4a7b-be0d-82331a3c88ed",
+        "59ea97a9-a3f9-4811-a825-5420cbab85dd",
+        "920aa282-a361-42b0-931b-e68f8b1a47f3"
+      ]
+    ]
+  },
+  "1343bdb3-ba41-46da-a4f3-5d48fc539362": {
+    "id": "1343bdb3-ba41-46da-a4f3-5d48fc539362",
+    "league_id": "09970aca-8fac-429b-8f9f-da928827bf2b",
+    "start_time_epoch": 1762751518,
+    "weeks": [
+      [
+        "870ddee6-14f6-47f4-8635-9630c2884398",
+        "7705aeb3-5de8-4e4e-9ec7-1a1d2f872f68",
+        "148deaf1-ec92-4025-8ad6-567717282a39"
+      ],
+      [
+        "ea746d0e-a142-47a7-b435-96e90ae4906d",
+        "a373d56b-7bcd-4bad-9b53-b9e0d057bd74",
+        "f2fbfb83-00c2-491a-98f1-17c6ce551f56"
+      ],
+      [
+        "58d80186-26f8-4085-8f48-4e4af285db7c",
+        "513e6e87-45c1-44bf-ab9b-e8a8dbdde15c",
+        "3d238480-b59d-4581-8faf-c05390a54e2b"
+      ]
+    ]
+  },
+  "7e95690e-eedf-4cd1-9ccb-43cab9841ede": {
+    "id": "7e95690e-eedf-4cd1-9ccb-43cab9841ede",
+    "league_id": "b6c2ab42-ad6f-40c4-a5af-7bc200c3fea5",
+    "start_time_epoch": 1762765925,
+    "weeks": [
+      [
+        "91889283-2582-4830-bdcf-d11e5dc2e53b",
+        "ff7486ce-c11d-403c-a99d-2daf6feaa5cd",
+        "c338517b-9cdf-4f32-9d4f-eae604b0f09e"
+      ],
+      [
+        "cc107ee5-4adb-47c3-98e5-42393584078b",
+        "84f0091d-8358-42c7-9efc-b6307dbc7a33",
+        "6d467799-7e23-43d6-8837-9d2bea504a26"
+      ],
+      [
+        "7738112f-d802-41fd-9191-d5781cfeec47",
+        "12eb3f95-8b1d-4ddf-b7d3-bc73a4e354e3",
+        "e1903ded-8ea4-4f34-a332-6a602895d48c"
+      ]
+    ]
+  },
+  "11d41ca7-5d23-4b92-acd3-c46e4176db09": {
+    "id": "11d41ca7-5d23-4b92-acd3-c46e4176db09",
+    "league_id": "dee3aba4-c17a-4248-89fb-ecaa11676a3c",
+    "start_time_epoch": 1762834332,
+    "weeks": [
+      [
+        "e724e09f-4f12-498f-ab7f-58756fcf0677",
+        "445e64b2-0c5c-4262-a4c9-6da0ee4509ba",
+        "40c725cd-e003-4ac2-8595-9acafc161be2"
+      ],
+      [
+        "1445b2e1-4852-40e0-bbbc-54b493f4c4c2",
+        "2034df0a-b2b7-43ea-a4c0-f2c0469ff3a9",
+        "0647b5cc-67b7-41c2-ad3e-ad32cfcc7457"
+      ],
+      [
+        "131a1b73-f22e-48a5-b9d0-0230a73ba9ef",
+        "910a8673-f011-4f48-9994-db4a3995792c",
+        "8da75391-6b06-4ec4-9e1b-b9a32d4137b9"
+      ]
+    ]
+  },
+  "38931b52-0418-491a-934c-78d6ee9ab6b5": {
+    "id": "38931b52-0418-491a-934c-78d6ee9ab6b5",
+    "league_id": "ed4b0838-d6fa-43e2-85c3-3bdce6656dad",
+    "start_time_epoch": 1763007138,
+    "weeks": [
+      [
+        "17fd20b8-de71-46df-84a5-60659d9c9e9b",
+        "38bdad4d-e72f-4fd8-a2b2-97aa7c6fb0d8",
+        "03488c9a-6b24-42f6-9c23-ed9cc3662738"
+      ],
+      [
+        "2db68206-61bd-4ad4-8b04-29adb9479f3c",
+        "1dbcd29e-57f4-4a9b-96f2-1ea400c2f2c0",
+        "51e140ce-7835-4e2b-8c1c-7f58f566cf2e"
+      ],
+      [
+        "bd425623-6ec2-4bf7-8ff4-1363cbbc152d",
+        "d3a80718-c29b-484e-b30f-cbcf0c10db6d",
+        "15438296-01f2-40b3-8872-37ff8664d6ab"
+      ]
+    ]
+  },
+  "6da1ab4b-cce0-46cf-a693-fc5acae771ea": {
+    "id": "6da1ab4b-cce0-46cf-a693-fc5acae771ea",
+    "league_id": "811be12e-3e6c-4795-a033-5348e78b51df",
+    "start_time_epoch": 1762835245,
+    "weeks": [
+      [
+        "e32783c2-a1c8-4e3d-805e-19d529c14c3e",
+        "c68ae077-4e42-49d6-8e2a-2c58828e76fc",
+        "c6ed7d85-4e63-499e-8adf-ed3bf69805aa"
+      ],
+      [
+        "41e95a82-fc6c-4881-be08-95f8109d7f61",
+        "7e6d1b9d-259a-4a19-b836-1e674f57180a",
+        "a5e6cb61-63b1-457b-87e5-1cc03722c5a3"
+      ],
+      [
+        "8c13fa13-63ce-4834-b282-13ef9cd755da",
+        "cdbb0951-b535-4bdd-accd-96f66ed97dbc",
+        "04621013-7f21-4447-ab17-5dd092dfe9c8"
+      ]
+    ]
+  },
+  "61658465-a989-4b12-9ea6-b20ae6b30402": {
+    "id": "61658465-a989-4b12-9ea6-b20ae6b30402",
+    "league_id": "e77287d5-2403-4a77-8979-99ffe4dbe0ce",
+    "start_time_epoch": 1762837952,
+    "weeks": [
+      [
+        "831fe01d-0c68-4a04-8be7-5c2292c240a3",
+        "11488e69-7d15-4336-a791-1aeeb076468a",
+        "337ea4fc-11be-4c6b-8d37-383bc526b7ff"
+      ],
+      [
+        "42a149dc-ebb1-47f4-8529-d22b11002134",
+        "c68444ab-530f-4b91-a079-93ec8608c3b3",
+        "ebc2847e-2bf4-42be-857b-e4126ba27b4b"
+      ],
+      [
+        "75b29981-e507-4857-a512-64b1e9c00eca",
+        "e9a48791-1a91-4568-84f8-ee086b150abb",
+        "d24d09e7-7f37-4768-bed4-f9f5a6a9fe9f"
+      ]
+    ]
+  },
+  "2af2c3af-015e-40ab-a64e-2a20c9eea9b0": {
+    "id": "2af2c3af-015e-40ab-a64e-2a20c9eea9b0",
+    "league_id": "a55bec78-ccc5-4363-b318-266f8ebdb252",
+    "start_time_epoch": 1762852359,
+    "weeks": [
+      [
+        "7e5088a7-7b23-4aaa-9359-9412bec3175e",
+        "beb6d2c4-a6ea-4c79-8e49-edb003c65b25",
+        "85c9b773-f74b-4f81-aeef-b3fac7903037"
+      ],
+      [
+        "e49e4838-09f3-4fe9-b550-196f9f21d231",
+        "ba2912ce-64cc-4a42-8f15-970aae409b61",
+        "0ac2928e-5b7f-4d99-8446-aa28d6d1cda8"
+      ],
+      [
+        "94ce192a-bf76-4580-8056-60417de1f831",
+        "b6a30457-6bd7-469b-b076-671a417d1b6b",
+        "e895aede-4465-40c9-b53a-496c65a17d7a"
+      ]
+    ]
+  },
+  "ee58772d-bdf3-4c3a-9d00-05017ade7139": {
+    "id": "ee58772d-bdf3-4c3a-9d00-05017ade7139",
+    "league_id": "b056f5a7-c3ff-4abd-bd20-7daf34c9e339",
+    "start_time_epoch": 1762920766,
+    "weeks": [
+      [
+        "f7d6fde3-0bcf-400a-b971-eac7a8fc7b55",
+        "d98b3930-b600-4c98-a4c2-960cde8be7ef",
+        "8abddbbb-0b2d-45a1-adde-0a29ebb453c0"
+      ],
+      [
+        "6ca42836-184a-4e11-9e85-49fbc9ae724c",
+        "13182059-e80c-4b54-86e7-1ee699e0453e",
+        "ec7c4f13-1b02-4e69-9b03-5204e2d975b0"
+      ],
+      [
+        "532b9459-7e5e-4f99-8dd0-f203e1f1e3cc",
+        "ecd8d72a-652f-48ce-b80c-446aff088ede",
+        "a58cac30-7004-4201-980a-7d079f472382"
+      ]
+    ]
+  },
+  "13b9170d-efb6-4d73-a43e-de9a0760ebff": {
+    "id": "13b9170d-efb6-4d73-a43e-de9a0760ebff",
+    "league_id": "5a9a5f03-2f02-461c-98dc-fe78e1b09900",
+    "start_time_epoch": 1763093572,
+    "weeks": [
+      [
+        "0303c9a4-a430-4b58-a702-82ed22e82fa7",
+        "8363e63e-d4c0-4c33-b5f3-74b24b878179",
+        "b4e7a074-424c-4a14-8fb4-9577201ec649"
+      ],
+      [
+        "aad5d96e-817f-4f89-b46a-bc60ccc6ad93",
+        "4803c7a6-fe4c-4c7f-8272-32def4531f66",
+        "bb3abba2-6d78-4943-9731-a477dc3a04d5"
+      ],
+      [
+        "2ebc744d-0321-4998-b8cb-19cec5f6f8ef",
+        "012c0810-a060-4b2e-a7e3-f35d6debbd2b",
+        "472577e5-ef3f-4ff7-bd61-3ac2fb10de54"
+      ]
+    ]
+  }
+}

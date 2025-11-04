@@ -1,17 +1,17 @@
 # survivor.py
 from __future__ import annotations
 
-import os
 import json
-import sqlite3
-import hashlib
-from typing import Dict, Tuple, List, Optional
-from datetime import datetime, date, time, timezone
+import os
+import random
+import string
+from datetime import datetime, timedelta
+from typing import List, Optional
 
 import requests
-import pytz
 import typer
 from dotenv import load_dotenv
+from pydantic import BaseModel
 
 app = typer.Typer(add_completion=False)
 
@@ -20,26 +20,47 @@ app = typer.Typer(add_completion=False)
 load_dotenv()
 
 BASE_URL = os.getenv("BASE_URL", "").rstrip("/")
-LEAGUE_ID = os.getenv("LEAGUE_ID", "")
-USERNAME = os.getenv("USERNAME", "")
-PASSWORD = os.getenv("PASSWORD", "")
+GAME_ID = os.getenv("GAME_ID", "")
+FS_USERNAME = os.getenv("FS_USERNAME", "")
+FS_PASSWORD = os.getenv("FS_PASSWORD", "")
 API_TOKEN = os.getenv("API_TOKEN", "")
-DEFAULT_TZ = os.getenv("TZ", "America/Lima")
 
-SQLITE_PATH = os.getenv("SQLITE_PATH", "survivor.db")
-RESULTS_PATH = os.getenv("MATCHES_RESULTS_PATH", "/matches/results/").strip()
+NFL_LOGO_URL = (
+    "https://static.www.nfl.com/t_headshot_desktop/f_auto/league/"
+    "api/clubs/logos/NFL"
+)
 
-NFL_LOGO_URL = "https://static.www.nfl.com/t_headshot_desktop/f_auto/league/api/clubs/logos/NFL"
+
+class Team(BaseModel):
+    pk: str
+    fields: dict
+
+
+class League(BaseModel):
+    id: str
+    weeks: List[List[str]]
+
+
+class Room(BaseModel):
+    id: str
+    league_id: str
+    start_time_epoch: int
+    weeks: List[List[str]]
+
+
+class MatchResult(BaseModel):
+    match_id: str
+    team: str
 
 
 def require_env() -> None:
     missing = []
     if not BASE_URL:
         missing.append("BASE_URL")
-    if not LEAGUE_ID:
-        missing.append("LEAGUE_ID")
-    if not (API_TOKEN or (USERNAME and PASSWORD)):
-        missing.append("API_TOKEN o USERNAME/PASSWORD")
+    if not (API_TOKEN or (FS_USERNAME and FS_PASSWORD)):
+        missing.append("API_TOKEN o FS_USERNAME/FS_PASSWORD")
+    if not GAME_ID:
+        missing.append("GAME_ID")
     if missing:
         raise RuntimeError(f"Falta {' ,'.join(missing)} en .env")
 
@@ -56,8 +77,8 @@ def login_and_token() -> str:
     r = requests.post(
         url,
         data={
-            "username": USERNAME,
-            "password": PASSWORD,
+            "username": FS_USERNAME,
+            "password": FS_PASSWORD,
             # Si tu backend requiere más campos de OAuth2, agrégalos aquí.
         },
         headers={"Content-Type": "application/x-www-form-urlencoded"},
@@ -76,217 +97,99 @@ def login_and_token() -> str:
         or ""
     )
     if not token:
-        raise RuntimeError(f"Login OK pero no encontré token en respuesta: {data}")
+        raise RuntimeError(
+            f"Login OK pero no encontré token en respuesta: {data}"
+        )
     return token
 
 
 def auth_headers() -> dict:
     token = login_and_token()
-    return {"Authorization": f"Bearer {token}", "Content-Type": "application/json"}
-
-# ===================== DB HELPERS =====================
-
-
-def ensure_db() -> None:
-    con = sqlite3.connect(SQLITE_PATH)
-    cur = con.cursor()
-    cur.execute(
-        """
-        CREATE TABLE IF NOT EXISTS matches (
-            api_id TEXT PRIMARY KEY,
-            external_id TEXT,
-            home TEXT,
-            away TEXT,
-            start_time_utc TEXT,
-            week INTEGER
-        )
-        """
-    )
-    con.commit()
-    con.close()
-
-
-def save_match(api_id: str, external_id: str, home: str, away: str, start_utc: str, week: int) -> None:
-    ensure_db()
-    con = sqlite3.connect(SQLITE_PATH)
-    cur = con.cursor()
-    cur.execute(
-        """
-        INSERT OR REPLACE INTO matches (api_id, external_id, home, away, start_time_utc, week)
-        VALUES (?, ?, ?, ?, ?, ?)
-        """,
-        (api_id, external_id, home, away, start_utc, week),
-    )
-    con.commit()
-    con.close()
-
-
-def load_matches_by_week(week: int) -> List[Dict]:
-    ensure_db()
-    con = sqlite3.connect(SQLITE_PATH)
-    cur = con.cursor()
-    cur.execute(
-        "SELECT api_id, home, away, start_time_utc FROM matches WHERE week=? ORDER BY start_time_utc",
-        (week,),
-    )
-    rows = cur.fetchall()
-    con.close()
-    return [{"api_id": r[0], "home": r[1], "away": r[2], "start_time_utc": r[3]} for r in rows]
+    return {
+        "Authorization": f"Bearer {token}",
+        "Content-Type": "application/json",
+    }
 
 # ===================== TEAMS / TIME HELPERS =====================
-
-
-def load_teams_index(teams_json_path: str) -> Tuple[Dict[str, str], Dict[str, str]]:
-    """
-    Devuelve:
-      - by_short: dict short_name -> team_uuid
-      - by_name: dict full name -> team_uuid
-    Compatible con el fixture estilo Django que me pasaste.
-    """
-    with open(teams_json_path, "r", encoding="utf-8") as f:
-        data = json.load(f)
-
-    by_short: Dict[str, str] = {}
-    by_name: Dict[str, str] = {}
-    for row in data:
-        fields = row.get("fields", {})
-        short = (fields.get("short_name") or "").strip().upper()
-        name = (fields.get("name") or "").strip()
-        pk = row.get("pk")
-        if short and pk:
-            by_short[short] = pk
-        if name and pk:
-            by_name[name] = pk
-    return by_short, by_name
-
-
-def parse_time_hhmm(s: str) -> time:
-    hh, mm = s.split(":")
-    return time(hour=int(hh), minute=int(mm))
-
-
-def local_to_utc(dt_local: datetime, tz_name: str) -> datetime:
-    tz = pytz.timezone(tz_name)
-    localized = tz.localize(dt_local)
-    return localized.astimezone(timezone.utc)
 
 
 def iso_utc(dt_utc: datetime) -> str:
     # Ejemplo del Swagger incluía microsegundos + 'Z'
     return dt_utc.strftime("%Y-%m-%dT%H:%M:%S.%fZ")
 
-# ===================== CREATE MATCHES =====================
+
+def load_teams() -> List[Team]:
+    with open("data/teams.json", "r", encoding="utf-8") as f:
+        data = json.load(f)
+    return [Team(**team) for team in data]
 
 
-@app.command("create-matches")
-def create_matches(
-    season: str = typer.Option(..., help="Temporada, ej. 2025"),
-    week: int = typer.Option(..., help="Semana (int)"),
-    date_str: str = typer.Option(..., "--date-str", help="Fecha local YYYY-MM-DD"),
-    times: str = typer.Option(..., help='Horas locales "HH:MM,HH:MM,...", p.ej. "17:55,18:00,18:05"'),
-    pairs: str = typer.Option(..., help='Pares "HOME@AWAY,HOME@AWAY,...", p.ej. "BUF@MIA,NE@NYJ,KC@LAC"'),
-    teams_json_path: str = typer.Option(..., "--teams-json-path", help="Ruta a teams.json"),
-    tz_name: str = typer.Option(DEFAULT_TZ, "--tz-name", help="Zona horaria local, default: America/Lima"),
-    dry_run: bool = typer.Option(False, help="No enviar a la API, solo mostrar payloads"),
-):
-    """
-    Crea partidos (POST /matches/) y guarda el id del backend en SQLite.
-    """
-    require_env()
+def create_league(time_diff: timedelta, cnt_league: int) -> League:
+    url = f"{BASE_URL}/leagues/"
+    payload = {
+        "game_id": GAME_ID,
+        "short_name": f"NFL-{cnt_league}",
+        "name": f"NFL {cnt_league}",
+        "badge_url": NFL_LOGO_URL,
+    }
     headers = auth_headers()
-    by_short, _ = load_teams_index(teams_json_path)
+    res = requests.post(url, headers=headers, json=payload, timeout=30)
+    res.raise_for_status()
+    res = res.json()
+    id = res.get("id")
 
-    pair_list = [p.strip() for p in pairs.split(",") if p.strip()]
-    time_list = [t.strip() for t in times.split(",") if t.strip()]
-
-    if len(pair_list) != len(time_list):
-        raise typer.BadParameter(
-            f"pairs ({len(pair_list)}) y times ({len(time_list)}) deben tener el mismo número de items."
-        )
-
-    created = 0
-    errors = 0
-    for i, (pair, hhmm) in enumerate(zip(pair_list, time_list), start=1):
-        try:
-            home_short, away_short = [x.strip().upper() for x in pair.split("@")]
-            if home_short not in by_short or away_short not in by_short:
-                raise ValueError(f"Equipo no encontrado en teams.json: {pair}")
-
-            home_id = by_short[home_short]
-            away_id = by_short[away_short]
-
-            d = date.fromisoformat(date_str)
-            t = parse_time_hhmm(hhmm)
-            start_local = datetime.combine(d, t)
-            start_utc = local_to_utc(start_local, tz_name)
-
-            # -------- external_id de 32 chars (MD5) --------
-            eid_src = f"{home_short}-{away_short}-{start_utc.strftime('%Y%m%d%H%M')}"
-            external_id = hashlib.md5(eid_src.encode()).hexdigest()  # 32 chars exactos
-
-            payload = {
+    teams = load_teams()
+    match_url = f"{BASE_URL}/matches/"
+    weeks = []
+    for week in range(1, 4):
+        matchs = []
+        for mtch in range(3):
+            external_id = "".join(
+                random.choices(string.ascii_uppercase + string.digits, k=32)
+            )
+            body = {
                 "external_id": external_id,
-                "league_id": LEAGUE_ID,
-                "home_id": home_id,
-                "away_id": away_id,
-                "season": str(season),
-                "week": int(week),
-                "start_time": iso_utc(start_utc),
+                "league_id": id,
+                "home_id": teams[mtch * 2].pk,
+                "away_id": teams[mtch * 2 + 1].pk,
+                "season": "2025",
+                "week": week,
+                "start_time": iso_utc(datetime.utcnow() + time_diff),
             }
-
-            typer.echo(f"[{i}] POST /matches -> {payload}")
-
-            if dry_run:
-                created += 1
-                continue
-
-            url = f"{BASE_URL}/matches/"
-            r = requests.post(url, headers=headers, json=payload, timeout=30)
-            if r.status_code not in (200, 201):
-                typer.echo(f"[ERR {r.status_code}] {r.text}", err=True)
-                errors += 1
-                continue
-
-            data = r.json()
-            api_id = data.get("id") or data.get("pk") or ""
-            if not api_id:
-                typer.echo(f"[WARN] Respuesta sin id: {data}", err=True)
-            else:
-                save_match(
-                    api_id=api_id,
-                    external_id=external_id,
-                    home=home_short,
-                    away=away_short,
-                    start_utc=payload["start_time"],
-                    week=week,
-                )
-            created += 1
-
-        except Exception as e:
-            typer.echo(f"[ERR] {e}", err=True)
-            errors += 1
-
-    typer.echo(f"Resumen: creados={created}, errores={errors}")
+            res = requests.post(
+                match_url, headers=headers, json=body, timeout=30
+            )
+            try:
+                res.raise_for_status()
+            except requests.HTTPError as e:
+                print(f"Error creating match: {e}")
+                print(f"Response: {res.text}")
+                raise
+            res = res.json()
+            match_id = res.get("id")
+            matchs.append(match_id)
+        weeks.append(matchs)
+    return League(id=id, weeks=weeks)
 
 # ===================== CREATE ROOM =====================
 
 
-@app.command("create-room")
 def create_room(
-    name: str = typer.Option(..., help="Nombre de la sala"),
-    description: str = typer.Option("", help="Descripción"),
-    player_limit: int = typer.Option(10, help="Límite de jugadores"),
-    coins: int = typer.Option(10, help="Costo de entrada (monedas)"),
-    permission: str = typer.Option("PUBLIC", help="PUBLIC o PRIVATE"),
-    password: Optional[str] = typer.Option(None, help="Password si PRIVATE; si PUBLIC debe ir null"),
-    image_url: str = typer.Option(NFL_LOGO_URL, help="URL de imagen (NFL)"),
-    prize_type: str = typer.Option("money_fixed", help="Tipo de premio; ej money_fixed"),
-    percentage: int = typer.Option(100, help="Porcentaje (si aplica)"),
-    fixed_amount: int = typer.Option(100, help="Monto fijo (si aplica)"),
-    reward_description: str = typer.Option("Premio $100 al ganador", help="Descripción de premio"),
-    top_winners: int = typer.Option(1, help="Cantidad de ganadores"),
-    start_week: int = typer.Option(..., help="Semana inicial"),
-    end_week: int = typer.Option(..., help="Semana final"),
+    league_id: str,
+    name: str,
+    description: str,
+    player_limit: int,
+    coins: int,
+    permission: str = "PUBLIC",
+    password: Optional[str] = None,
+    image_url: str = NFL_LOGO_URL,
+    prize_type: str = "money_fixed",
+    percentage: int = 100,
+    fixed_amount: int = 100,
+    reward_description: str = "Premio $100 al ganador",
+    top_winners: int = 1,
+    start_week: int = ...,
+    end_week: int = ...,
 ):
     """
     Crea una sala (POST /rooms/) con TODOS los campos que exige tu Swagger.
@@ -311,53 +214,24 @@ def create_room(
         "fixed_amount": fixed_amount,
         "reward_description": reward_description,
         "top_winners": top_winners,
-        "league_id": LEAGUE_ID,
+        "league_id": league_id,
         "start_week": start_week,
         "end_week": end_week,
     }
 
-    typer.echo(f"POST /rooms -> {payload}")
     url = f"{BASE_URL}/rooms/"
     r = requests.post(url, headers=headers, json=payload, timeout=30)
     if r.status_code not in (200, 201):
         typer.echo(f"[ERR {r.status_code}] {r.text}", err=True)
         raise typer.Exit(code=1)
-
-    typer.echo(f"Room creada: {r.json()}")
+    return r.json()
 
 # ===================== RESULTS HELPERS =====================
 
 
-@app.command("dump-week-template")
-def dump_week_template(
-    week: int = typer.Option(..., help="Semana a exportar"),
-    out_file: str = typer.Option(None, help="Ruta JSON de salida; default: data/week_<n>_results.json"),
-):
-    """
-    Exporta plantilla de resultados para la semana a partir de la DB local.
-    """
-    matches = load_matches_by_week(week)
-    if not matches:
-        typer.echo(f"No hay partidos guardados para week={week}.", err=True)
-        raise typer.Exit(code=1)
-
-    results = [{"match_id": m["api_id"], "team": ""} for m in matches]
-    payload = {"results": results}
-
-    if not out_file:
-        os.makedirs("data", exist_ok=True)
-        out_file = f"data/week_{week}_results.json"
-
-    with open(out_file, "w", encoding="utf-8") as f:
-        json.dump(payload, f, indent=2)
-
-    typer.echo(f"Plantilla creada: {out_file}")
-
-
-@app.command("set-week-results")
 def set_week_results(
-    week: int = typer.Option(..., help="Semana"),
-    file: str = typer.Option(..., help="Archivo JSON con {'results': [{'match_id':..., 'team':'home|away'}, ...]}"),
+    week: int,
+    results: List[MatchResult]
 ):
     """
     PATCH /matches/results/?week=<week> para cargar resultados.
@@ -365,20 +239,87 @@ def set_week_results(
     require_env()
     headers = auth_headers()
 
-    with open(file, "r", encoding="utf-8") as f:
-        payload = json.load(f)
-
-    url = f"{BASE_URL}{RESULTS_PATH}"
+    url = f"{BASE_URL}/matches/results/"
     params = {"week": week}
-    r = requests.patch(url, headers=headers, params=params, json=payload, timeout=60)
+    r = requests.patch(
+        url, headers=headers, params=params,
+        json={"results": [result.dict() for result in results]},
+        timeout=60
+    )
     if r.status_code not in (200, 201):
         typer.echo(f"[ERR {r.status_code}] {r.text}", err=True)
         raise typer.Exit(code=1)
 
     typer.echo(f"Resultados aplicados: {r.json()}")
 
+
+@app.command("create-all-rooms")
+def create_all_rooms():
+    cnt = 1
+    data = {}
+    for week in range(0, 7):
+        eps_list = [
+            timedelta(minutes=15),
+            timedelta(hours=1),
+            timedelta(hours=5),
+            timedelta(days=1),
+            timedelta(days=3),
+        ]
+        for eps in eps_list:
+            time_diff = timedelta(days=week) + eps
+            league = create_league(time_diff, cnt_league=cnt)
+            room = create_room(
+                league_id=league.id,
+                name=f"NFL Room {cnt}",
+                description=f"Sala NFL {league.id}",
+                player_limit=20,
+                coins=10,
+                permission="PUBLIC",
+                password=None,
+                image_url=NFL_LOGO_URL,
+                prize_type="money_fixed",
+                percentage=100,
+                fixed_amount=100,
+                top_winners=1,
+                start_week=1,
+                end_week=3,
+            )
+            unix_time = int((datetime.utcnow() + time_diff).timestamp())
+            typer.echo(
+                f"Creada sala {room['id']} para liga {league.id} "
+                f"con inicio en {unix_time} (epoch)"
+            )
+            data[room['id']] = Room(
+                id=room['id'],
+                league_id=league.id,
+                start_time_epoch=unix_time,
+                weeks=league.weeks,
+            ).dict()
+            cnt += 1
+    with open("created_rooms.json", "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2)
+
+
+@app.command("set-results")
+def set_results(room_id: str = typer.Option()):
+    with open("created_rooms.json", "r", encoding="utf-8") as f:
+        created_rooms = json.load(f)
+
+    room_data = created_rooms.get(room_id)
+    if not room_data:
+        typer.echo(f"Room {room_id} not found", err=True)
+        raise typer.Exit(1)
+
+    room = Room(**room_data)
+    for i, week in enumerate(room.weeks):
+        set_week_results(
+            week=i + 1,
+            results=[MatchResult(match_id=m, team="home") for m in week],
+        )
+
 # ===================== MAIN =====================
 
 
 if __name__ == "__main__":
     app()
+# survivor.py
