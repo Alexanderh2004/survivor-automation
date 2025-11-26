@@ -19,6 +19,8 @@ app = typer.Typer(add_completion=False)
 
 load_dotenv()
 
+FILENAME = "created_rooms.json"
+
 BASE_URL = os.getenv("BASE_URL", "").rstrip("/")
 GAME_ID = os.getenv("GAME_ID", "")
 FS_USERNAME = os.getenv("FS_USERNAME", "")
@@ -26,8 +28,7 @@ FS_PASSWORD = os.getenv("FS_PASSWORD", "")
 API_TOKEN = os.getenv("API_TOKEN", "")
 
 NFL_LOGO_URL = (
-    "https://static.www.nfl.com/t_headshot_desktop/f_auto/league/"
-    "api/clubs/logos/NFL"
+    "https://upload.wikimedia.org/wikipedia/en/a/a2/National_Football_League_logo.svg"
 )
 
 
@@ -46,6 +47,7 @@ class Room(BaseModel):
     league_id: str
     start_time_epoch: int
     weeks: List[List[str]]
+    finished: bool = False
 
 
 class MatchResult(BaseModel):
@@ -150,8 +152,8 @@ def create_league(time_diff: timedelta, cnt_league: int) -> League:
             body = {
                 "external_id": external_id,
                 "league_id": id,
-                "home_id": teams[mtch * 2].pk,
-                "away_id": teams[mtch * 2 + 1].pk,
+                "home_id": teams[2*(week * 3 + mtch)].pk,
+                "away_id": teams[2*(week * 3 + mtch) + 1].pk,
                 "season": "2025",
                 "week": week,
                 "start_time": iso_utc(datetime.utcnow() + time_diff),
@@ -257,20 +259,20 @@ def set_week_results(
 def create_all_rooms():
     cnt = 1
     data = {}
-    for week in range(0, 7):
+
+    for week in range(1, 2):
         eps_list = [
             timedelta(minutes=15),
+            timedelta(minutes=30),
+            timedelta(minutes=45),
             timedelta(hours=1),
-            timedelta(hours=5),
-            timedelta(days=1),
-            timedelta(days=3),
         ]
         for eps in eps_list:
             time_diff = timedelta(days=week) + eps
             league = create_league(time_diff, cnt_league=cnt)
             room = create_room(
                 league_id=league.id,
-                name=f"NFL Room {cnt}",
+                name=f"SURVIVOR NFL {cnt}",
                 description=f"Sala NFL {league.id}",
                 player_limit=20,
                 coins=10,
@@ -296,26 +298,31 @@ def create_all_rooms():
                 weeks=league.weeks,
             ).dict()
             cnt += 1
-    with open("created_rooms.json", "w", encoding="utf-8") as f:
+    with open(FILENAME, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2)
 
 
 @app.command("set-results")
-def set_results(room_id: str = typer.Option()):
-    with open("created_rooms.json", "r", encoding="utf-8") as f:
+def set_results():
+    with open(FILENAME, "r", encoding="utf-8") as f:
         created_rooms = json.load(f)
-
-    room_data = created_rooms.get(room_id)
-    if not room_data:
-        typer.echo(f"Room {room_id} not found", err=True)
-        raise typer.Exit(1)
-
-    room = Room(**room_data)
-    for i, week in enumerate(room.weeks):
-        set_week_results(
-            week=i + 1,
-            results=[MatchResult(match_id=m, team="home") for m in week],
-        )
+    for id, room_dict in created_rooms.items():
+        room = Room(**room_dict)
+        if room.finished:
+            typer.echo(f"Room {id} already finished, skipping.")
+            continue
+        an_hour_ago = datetime.utcnow() - timedelta(hours=1)
+        if room.start_time_epoch > int(an_hour_ago.timestamp()):
+            typer.echo(f"Room {id} not finished yet, skipping.")
+            continue
+        for i, week in enumerate(room.weeks):
+            set_week_results(
+                week=i + 1,
+                results=[MatchResult(match_id=m, team="home") for m in week],
+            )
+        created_rooms[id]['finished'] = True
+    with open(FILENAME, "w", encoding="utf-8") as f:
+        json.dump(created_rooms, f, indent=2)
 
 # ===================== MAIN =====================
 
