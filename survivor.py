@@ -260,7 +260,7 @@ def create_all_rooms():
     cnt = 1
     data = {}
 
-    for week in range(1, 2):
+    for week in range(1):
         eps_list = [
             timedelta(minutes=15),
             timedelta(minutes=30),
